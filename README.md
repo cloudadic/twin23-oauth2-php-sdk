@@ -23,6 +23,8 @@ The authorization code grant type is the most common grant type used when authen
 
 Now, for users who you don't have an account on Twin23, they'll be asked to put in their user info. Once fill out the form they are good to get logged-in.
 
+Here's how you can configure you client.
+
 ```php
 $client = new Twin23\OAuth2\Client([
     // The client ID assigned to you by the provided
@@ -34,8 +36,10 @@ $client = new Twin23\OAuth2\Client([
     // Permissions to the data that you would like to retrieve
     'scope' => ['name', 'email', 'photo', 'phone']
 ]);
+```
 
-// If we don't have an authorization code then get one
+#### If we don't have an authorization code then get one
+```php
 if (!isset($_GET['code'])) {
 
     // Fetch the authorization URL from the provider; this returns the
@@ -97,18 +101,6 @@ if (!isset($_GET['code'])) {
 Once your application is authorized, you can refresh an expired token using a refresh token rather than going through the entire process of obtaining a brand new token. To do so, simply reuse this refresh token from your data store to request a refresh.
 
 ```php
-
-$client = new Twin23\OAuth2\Client([
-    // The client ID assigned to you by the provided
-    'client_id' => 'YOUR_CLIENT_ID',
-    // The client secret provided
-    'client_secret' => 'YOUR_CLIENT_SECRET',
-    // Redirect URL
-    'redirect_uri' => 'http://my.website.com/redirect-page',
-    // Permissions to the data that you would like to retrieve
-    'scope' => ['name', 'email', 'photo', 'phone']
-]);
-
 $existingAccessToken = $client->getAccessToken('authorization_code', [
     'code' => $code
 ]);
