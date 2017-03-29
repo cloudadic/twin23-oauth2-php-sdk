@@ -2,9 +2,7 @@
 
 This package makes it simple to integrate your application with [Twin23 OAuth 2.0](http://oauth.net/2/) service.
 
-
 ---
-Having users sign up / sign in quickly is troublesome. Twin23 makes it super easy. You don't have to worry about passwords anymore.
 
 This package is compliant with [PSR-1][], [PSR-2][], [PSR-4][], and [PSR-7][]. If you notice compliance oversights, please send a patch via pull request. If you're interesting in contributing to this library, please take a look at our [contributing guidelines](CONTRIBUTING.md).
 
