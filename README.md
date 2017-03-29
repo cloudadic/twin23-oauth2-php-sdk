@@ -26,12 +26,6 @@ The following versions of PHP are supported.
 * PHP 7.1
 * HHVM
 
-## Providers
-
-A list of official PHP League providers, as well as third-party providers, may be found in the [providers list README](docs/providers/thirdparty.md).
-
-To build your own provider, please refer to the [provider guide README](README.PROVIDER-GUIDE.md).
-
 ## Usage
 
 If using Composer to require a specific provider client library, you **do not need to also require this library**. Composer will handle the dependencies for you.
