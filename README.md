@@ -122,7 +122,7 @@ Add the following line to your composer.json
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/cloudadic/twin23-oauth2-php-sdk/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/cloudadic/twin23-oauth2-php-sdk/blob/master/LICENSE) for more information.
 
 
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
