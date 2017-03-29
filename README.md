@@ -114,9 +114,10 @@ Via Composer
 ``` bash
 $ composer require cloudadic/twin23-oauth2-php-sdk
 ```
-### OR
+### OR 
+Add the following line to your composer.json
 ``` bash
-$ "cloudadic/twin23-oauth2-php-sdk":"*"
+"cloudadic/twin23-oauth2-php-sdk":"*"
 ```
 
 ## License
