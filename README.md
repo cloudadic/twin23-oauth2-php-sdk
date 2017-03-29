@@ -17,10 +17,6 @@ The following versions of PHP are supported.
 * PHP 7.1
 * HHVM
 
-## Usage
-
-If using Composer to require a specific provider client library, you **do not need to also require this library**. Composer will handle the dependencies for you.
-
 ### Authorization Code Grant
 
 The authorization code grant type is the most common grant type used when authenticating users with a third-party service. This grant type utilizes a client (this library), a server (the service provider), and a resource owner (the user with credentials to a protected—or owned—resource) to request access to resources owned by the user. This is often referred to as _3-legged OAuth_, since there are three parties involved.
@@ -140,7 +136,7 @@ $ "cloudadic/twin23-oauth2-php-sdk":"*"
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/cloudadic/twin23-oauth2-php-sdk/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://github.com/cloudadic/twin23-oauth2-php-sdk/master/LICENSE) for more information.
 
 
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
