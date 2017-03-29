@@ -23,7 +23,7 @@ The authorization code grant type is the most common grant type used when authen
 
 Now, for users who you don't have an account on Twin23, they'll be asked to put in their user info. Once fill out the form they are good to get logged-in.
 
-#### Here's how you can configure you client.
+#### Here's how you can configure your client.
 
 ```php
 $client = new Twin23\OAuth2\Client([
