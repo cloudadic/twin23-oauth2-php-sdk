@@ -77,12 +77,7 @@ if (!isset($_GET['code'])) {
         echo 'Expired in: ' . $accessToken->getExpires() . "<br>";
         echo 'Already expired? ' . ($accessToken->hasExpired() ? 'expired' : 'not expired') . "<br>";
 
-        // Using the access token, we may look up details about the
-        
-        // The provider provides a way to get an authenticated API request for
-        // the service, using the access token; it returns an object conforming
-        // to Psr\Http\Message\RequestInterface.
-        
+        // Using the access token, we may look up details about the user
 
     } catch (\Twin23\OAuth2\Exception\IdentityProviderException $e) {
 
