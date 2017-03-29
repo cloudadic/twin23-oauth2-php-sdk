@@ -1,6 +1,6 @@
 # Twin23 OAuth 2.0 Client
 
-This package makes it simple to integrate your application with [Twin OAuth 2.0](http://oauth.net/2/) service.
+This package makes it simple to integrate your application with [Twin23 OAuth 2.0](http://oauth.net/2/) service.
 
 [![Gitter Chat](https://img.shields.io/badge/gitter-join_chat-brightgreen.svg?style=flat-square)](https://gitter.im/thephpleague/oauth2-client)
 [![Source Code](http://img.shields.io/badge/source-thephpleague/oauth2--client-blue.svg?style=flat-square)](https://github.com/thephpleague/oauth2-client)
