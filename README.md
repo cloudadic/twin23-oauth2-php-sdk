@@ -79,7 +79,7 @@ if (!isset($_GET['code'])) {
 
         // Using the access token, we may look up details about the user
 
-    } catch (\Twin23\OAuth2\Exception\IdentityProviderException $e) {
+    } catch (\Twin23\Exception\IdentityProviderException $e) {
 
         // Failed to get the access token or user details.
         exit($e->getMessage());
