@@ -32,13 +32,9 @@ If using Composer to require a specific provider client library, you **do not ne
 
 ### Authorization Code Grant
 
-The following example uses the out-of-the-box `GenericProvider` provided by this library. If you're looking for a specific provider (i.e. Facebook, Google, GitHub, etc.), take a look at our [list of provider client libraries](docs/providers/thirdparty.md). **HINT: You're probably looking for a specific provider.**
-
 The authorization code grant type is the most common grant type used when authenticating users with a third-party service. This grant type utilizes a client (this library), a server (the service provider), and a resource owner (the user with credentials to a protected—or owned—resource) to request access to resources owned by the user. This is often referred to as _3-legged OAuth_, since there are three parties involved.
 
-The following example illustrates this using [Brent Shaffer's](https://github.com/bshaffer) demo OAuth 2.0 application named **Lock'd In**. When running this code, you will be redirected to Lock'd In, where you'll be prompted to authorize the client to make requests to a resource on your behalf.
-
-Now, you don't really have an account on Lock'd In, but for the sake of this example, imagine that you are already logged in on Lock'd In when you are redirected there.
+Now, for users who you don't have an account on Twin23, they'll be asked to put in their user info. Once fill out the form they are good to get logged-in.
 
 ```php
 $client = new Twin23\OAuth2\Client([
