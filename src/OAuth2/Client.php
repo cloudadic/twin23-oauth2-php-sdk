@@ -179,7 +179,7 @@ class Client {
      * @param type $access_token
      * @return type json object
      */
-    public function getUserProfileInfo($access_token) {
+    public function getIdentity($access_token) {
         $response = $this->_httpClient->request('GET', '/oauth2/profile?' . http_build_query([
                             'access_token' => $access_token
                 ]))->getBody()->__toString();
