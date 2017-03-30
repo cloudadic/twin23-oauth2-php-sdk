@@ -7,6 +7,6 @@ namespace Twin23\Exception;
  *
  * @author miradnan
  */
-class Twin23ResponseException extends \Exception {
+class ResponseException extends \Exception {
     
 }
