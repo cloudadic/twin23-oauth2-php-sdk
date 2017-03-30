@@ -107,6 +107,11 @@ if ($existingAccessToken->hasExpired()) {
     // Purge old access token and store new access token to your data store.
 }
 ```
+## Get Identity Info
+```php
+$identity = $client->getIdentity($accessToken->getToken());
+```
+
 
 ## Install
 
