@@ -17,8 +17,7 @@ class Client {
     /**
      * 
      */
-    //const OAUTH_ENDPOINT = 'http://localhost/oauth2/';
-    const OAUTH_ENDPOINT = 'https://identity.twin23.local/oauth2/';
+    const OAUTH_ENDPOINT = 'https://identity.twin23.com/oauth2/';
 
     /**
      *
