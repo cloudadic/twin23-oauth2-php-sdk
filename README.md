@@ -16,6 +16,19 @@ The following versions of PHP are supported.
 * PHP 7.1
 * HHVM
 
+## Install
+
+Via Composer
+
+``` bash
+$ composer require cloudadic/twin23-oauth2-php-sdk
+```
+### OR 
+Add the following line to your composer.json
+``` bash
+"cloudadic/twin23-oauth2-php-sdk":"*"
+```
+
 ### Authorization Code Grant
 
 The authorization code grant type is the most common grant type used when authenticating users with a third-party service. This grant type utilizes a client (this library), a server (the service provider), and a resource owner (the user with credentials to a protected—or owned—resource) to request access to resources owned by the user. This is often referred to as _3-legged OAuth_, since there are three parties involved.
@@ -25,6 +38,8 @@ Now, for users who you don't have an account on Twin23, they'll be asked to put 
 #### Here's how you can configure your client.
 
 ```php
+// In order to get your OAuth 2 credentials you need to register your app at 
+
 $client = new Twin23\OAuth2\Client([
     // The client ID assigned to you by the provided
     'client_id' => 'YOUR_CLIENT_ID',
@@ -36,34 +51,15 @@ $client = new Twin23\OAuth2\Client([
     'scope' => ['name', 'email', 'photo', 'phone']
 ]);
 ```
-
-#### If we don't have an authorization code then get one
+#### Generate Authorization URL
 ```php
-if (!isset($_GET['code'])) {
+// Fetch the authorization URL. You can assign this to link on your web page.
+$authorizationUrl = $client->getAuthorizationUrl();
+```
 
-    // Fetch the authorization URL from the provider; this returns the
-    // urlAuthorize option and generates and applies any necessary parameters
-    // (e.g. state).
-    $authorizationUrl = $client->getAuthorizationUrl();
-
-    // Get the state generated for you and store it to the session.
-    $_SESSION['state'] = $client->getState();
-
-    // Redirect the user to the authorization URL.
-    header('Location: ' . $authorizationUrl);
-    exit;
-
-// Check given state against previously stored one to mitigate CSRF attack
-} elseif (empty($_GET['state']) || (isset($_SESSION['state']) && $_GET['state'] !== $_SESSION['state'])) {
-
-    if (isset($_SESSION['state'])) {
-        unset($_SESSION['state']);
-    }
-    
-    exit('Invalid state');
-
-} else {
-
+#### Generate Access Token
+```php
+if (!empty($_GET['code'])) {
     try {
 
         // Try to get an access token using the authorization code grant.
@@ -110,20 +106,6 @@ if ($existingAccessToken->hasExpired()) {
 ## Get Identity Info
 ```php
 $identity = $client->getIdentity($accessToken->getToken());
-```
-
-
-## Install
-
-Via Composer
-
-``` bash
-$ composer require cloudadic/twin23-oauth2-php-sdk
-```
-### OR 
-Add the following line to your composer.json
-``` bash
-"cloudadic/twin23-oauth2-php-sdk":"*"
 ```
 
 ## License
